@@ -1,0 +1,794 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="TaxTallyPro provides premium financial translation and bookkeeping for scaling service businesses, construction firms, e-commerce brands, and real estate investors. Keep clean, tax-ready books and understand your profit and cash flow clearly.">
+    <title>TaxTallyPro | Premium Financial Translation & Strategic Bookkeeping</title>
+    
+    <!-- Google Fonts: Outfit & Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Custom Stylesheet -->
+    <link rel="stylesheet" href="style.css?v=1.6">
+</head>
+<body>
+
+    <!-- Floating Background Lights (Red and Blue Glow) -->
+    <div class="glow-orb orb-blue"></div>
+    <div class="glow-orb orb-red"></div>
+
+    <!-- Floating Glassmorphism Navbar -->
+    <header class="navbar-wrapper">
+        <nav class="navbar" id="navbar">
+            <a href="#" class="nav-logo" id="nav-logo">
+                <img src="TAX_TALLY_LOGO_TRANSPARENT.png" alt="TaxTallyPro Logo" class="logo-img" />
+            </a>
+            
+            <div class="nav-menu" id="nav-menu">
+                <a href="#services" class="nav-link">Our Approach</a>
+                <a href="#profiles" class="nav-link">Who We Serve</a>
+                <a href="#simulator" class="nav-link">Leakage Calculator</a>
+                <a href="#case-studies" class="nav-link">Case Studies</a>
+                <a href="#why-us" class="nav-link">Competitors</a>
+            </div>
+
+            <div class="nav-actions">
+                <a href="#contact" class="btn btn-primary nav-cta">Book Free Audit</a>
+                <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle Menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section" id="home">
+        <div class="container hero-container">
+            <div class="hero-content">
+                <div class="badge-container">
+                    <span class="hero-badge">
+                        <span class="badge-dot"></span>
+                        More Than Bookkeeping: Financial Translation
+                    </span>
+                </div>
+                <h1 class="hero-title">
+                    We Don't Just Enter Data. We Translate <span class="text-gradient-red-blue">Numbers Into Profit.</span>
+                </h1>
+                <p class="hero-description">
+                    Most accounting services stop at spreadsheet delivery. At <strong>TaxTallyPro</strong>, we ensure you actually understand your monthly profit, cash flow, and financial reports in plain language—so you can make real-time decisions without any guesswork.
+                </p>
+                <div class="hero-actions">
+                    <a href="#contact" class="btn btn-primary btn-large">
+                        Get Your Free Audit
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                    </a>
+                    <a href="#case-studies" class="btn btn-outline btn-large">View Case Studies</a>
+                </div>
+                
+                <div class="hero-trust-metrics">
+                    <div class="trust-item">
+                        <span class="trust-number">100%</span>
+                        <span class="trust-label">Tax-Ready Cleanliness</span>
+                    </div>
+                    <div class="trust-divider"></div>
+                    <div class="trust-item">
+                        <span class="trust-number">No Jargon</span>
+                        <span class="trust-label">Plain English Reports</span>
+                    </div>
+                    <div class="trust-divider"></div>
+                    <div class="trust-item">
+                        <span class="trust-number">Real-Time</span>
+                        <span class="trust-label">Decision Support</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hero-dashboard-preview">
+                <div class="dashboard-card glass">
+                    <div class="dashboard-header">
+                        <div class="window-controls">
+                            <span class="dot-red"></span>
+                            <span class="dot-yellow"></span>
+                            <span class="dot-green"></span>
+                        </div>
+                        <div class="dashboard-title">TaxTallyPro Live Hub</div>
+                        <div class="dashboard-status">
+                            <span class="pulse-dot"></span> Reconciled: Today
+                        </div>
+                    </div>
+                    
+                    <div class="dashboard-grid">
+                        <div class="dash-widget widget-revenue">
+                            <div class="widget-label">Monthly Gross Revenue</div>
+                            <div class="widget-value">$182,450</div>
+                            <div class="widget-trend trend-up">
+                                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline><polyline points="17 6 23 6 23 12"></polyline></svg>
+                                +14.2% vs Last Month
+                            </div>
+                        </div>
+
+                        <div class="dash-widget widget-margin">
+                            <div class="widget-label">Net Profit Margin</div>
+                            <div class="radial-progress-wrapper">
+                                <svg class="radial-svg" viewBox="0 0 36 36">
+                                    <path class="circle-bg" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                                    <path class="circle-progress animate-progress" stroke-dasharray="32, 100" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                                </svg>
+                                <div class="radial-percentage">32%</div>
+                            </div>
+                            <div class="widget-small-desc">Target: 35% Goal</div>
+                        </div>
+
+                        <div class="dash-widget widget-cashflow">
+                            <div class="widget-label">Cash Flow Projection</div>
+                            <div class="chart-container">
+                                <svg class="sparkline-chart" viewBox="0 0 200 60">
+                                    <defs>
+                                        <linearGradient id="chartGrad" x1="0" y1="0" x2="0" y2="1">
+                                            <stop offset="0%" stop-color="var(--accent-red)" stop-opacity="0.3"></stop>
+                                            <stop offset="100%" stop-color="var(--accent-blue)" stop-opacity="0"></stop>
+                                        </linearGradient>
+                                        <linearGradient id="lineGrad" x1="0" y1="0" x2="1" y2="0">
+                                            <stop offset="0%" stop-color="var(--accent-red)"></stop>
+                                            <stop offset="100%" stop-color="var(--accent-blue)"></stop>
+                                        </linearGradient>
+                                    </defs>
+                                    <path class="sparkline-area" d="M 0 50 Q 25 35 50 42 T 100 20 T 150 28 T 200 10 L 200 60 L 0 60 Z" fill="url(#chartGrad)"></path>
+                                    <path class="sparkline-line" d="M 0 50 Q 25 35 50 42 T 100 20 T 150 28 T 200 10" fill="none" stroke="url(#lineGrad)" stroke-width="2.5"></path>
+                                    <circle cx="200" cy="10" r="4" fill="var(--accent-red)" class="pulse-circle"></circle>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Translation Box: The Core Solution -->
+                    <div class="translation-box">
+                        <div class="translation-title">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+                            Monthly Translation Insight
+                        </div>
+                        <p class="translation-text" id="dynamic-insight">
+                            "Your revenue has increased, but cash reserves dropped due to a <strong>15-day delay in customer invoice clearings</strong>. Meanwhile, your material costing on active projects increased by 6%. We should adjust your progress billing triggers."
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services / Clarity Gap Section -->
+    <section class="clarity-section" id="services">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="section-subtitle">THE CLARITY GAP</span>
+                <h2 class="section-title">Why Spreadsheet Services Leave You Stranded</h2>
+                <p class="section-desc max-w-2xl mx-auto">
+                    Most accounting services stop at exporting ledgers. We bridge the gap between raw financial rows and actionable, growth-focused business decisions.
+                </p>
+            </div>
+
+            <div class="comparison-grid">
+                <!-- Bad Side -->
+                <div class="comp-card card-messy glass">
+                    <div class="comp-card-badge red">Traditional Bookkeepers</div>
+                    <ul class="comp-list">
+                        <li>
+                            <svg class="icon-red" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="15" y1="9" x2="9" y2="15"></line><line x1="9" y1="9" x2="15" y2="15"></line></svg>
+                            <span><strong>Dump spreadsheets</strong> in your inbox without explaining what any of the numbers mean.</span>
+                        </li>
+                        <li>
+                            <svg class="icon-red" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="15" y1="9" x2="9" y2="15"></line><line x1="9" y1="9" x2="15" y2="15"></line></svg>
+                            <span>Force you into <strong>financial guesswork</strong> to figure out if you're actually profitable.</span>
+                        </li>
+                        <li>
+                            <svg class="icon-red" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="15" y1="9" x2="9" y2="15"></line><line x1="9" y1="9" x2="15" y2="15"></line></svg>
+                            <span>Provide books that are outdated, leading to <strong>intense anxiety during tax season</strong>.</span>
+                        </li>
+                        <li>
+                            <svg class="icon-red" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="15" y1="9" x2="9" y2="15"></line><line x1="9" y1="9" x2="15" y2="15"></line></svg>
+                            <span>Offer zero proactive advice on how to optimize cash flow or fix margin compression.</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Good Side -->
+                <div class="comp-card card-premium glass glow-border-blue-red">
+                    <div class="comp-card-badge blue-gradient">TaxTallyPro Partnership</div>
+                    <ul class="comp-list">
+                        <li>
+                            <svg class="icon-green" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                            <span><strong>Deliver plain English reports</strong> that highlight exactly how your business is performing.</span>
+                        </li>
+                        <li>
+                            <svg class="icon-green" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                            <span>Ensure <strong>total clarity on monthly profit</strong>, margins, and cash flow trends.</span>
+                        </li>
+                        <li>
+                            <svg class="icon-green" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                            <span>Maintain <strong>clean, tax-ready books</strong> 365 days a year to eliminate tax prep friction.</span>
+                        </li>
+                        <li>
+                            <svg class="icon-green" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                            <span>Provide <strong>proactive forecasting models</strong> and cash flow budgeting to fuel expansion.</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Customer Profile Selector -->
+    <section class="profiles-section" id="profiles">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="section-subtitle">DESIGNED FOR SEVERE ACCOUNTING PAIN</span>
+                <h2 class="section-title">Tailored Solutions for Five Core Segments</h2>
+                <p class="section-desc max-w-2xl mx-auto">
+                    We specialize in serving business profiles that manage complex transactional operations and require real financial clarity to survive and scale.
+                </p>
+            </div>
+
+            <!-- Profile Nav Tabs -->
+            <div class="profile-tabs" id="profile-tabs">
+                <button class="profile-tab-btn active" data-target="services-biz">
+                    <span class="tab-icon">💼</span>
+                    Service Businesses
+                </button>
+                <button class="profile-tab-btn" data-target="construction">
+                    <span class="tab-icon">🏗️</span>
+                    Construction & Contractors
+                </button>
+                <button class="profile-tab-btn" data-target="ecommerce">
+                    <span class="tab-icon">🛒</span>
+                    E-Commerce Brands
+                </button>
+                <button class="profile-tab-btn" data-target="realestate">
+                    <span class="tab-icon">🏢</span>
+                    Real Estate Investors
+                </button>
+                <button class="profile-tab-btn" data-target="growth">
+                    <span class="tab-icon">📈</span>
+                    Growth-Focused Owners
+                </button>
+            </div>
+
+            <!-- Profile Content Area -->
+            <div class="profile-display-card glass" id="profile-display-card">
+                <!-- Inner layout changes via JS -->
+                <div class="profile-display-grid" id="profile-content-target">
+                    <!-- Default: Service Businesses -->
+                    <div class="profile-info-column">
+                        <div class="profile-header-meta">
+                            <span class="profile-tag">Annual Revenue: $250k - $3M</span>
+                            <span class="profile-tag">Teams: Scaling Fast</span>
+                        </div>
+                        <h3 class="profile-display-title">Small to Mid-Sized Service Businesses</h3>
+                        <p class="profile-display-desc">
+                            Founder-led operations that manage moving parts like employee payroll, complex invoicing, unpredictable cash flow, multiple vendor payments, and heavy tax pressures. They are looking for more than just bookkeeping; they need an expert who can explain what the numbers mean for their future.
+                        </p>
+                        
+                        <div class="pain-points-list">
+                            <div class="pain-point-item">
+                                <span class="pain-badge">Pain Point</span>
+                                <span class="pain-text">Un-updated books, chaotic invoicing pipelines, and a total lack of monthly profit visibility.</span>
+                            </div>
+                            <div class="pain-point-item">
+                                <span class="pain-badge">Solution</span>
+                                <span class="pain-text">Clean, tax-ready books delivered by the 10th of every month, paired with a video walk-through explaining your cash flow and profitability.</span>
+                            </div>
+                        </div>
+
+                        <div class="profile-footer-cta">
+                            <a href="#contact" class="btn btn-primary">Request Service Audit</a>
+                        </div>
+                    </div>
+                    
+                    <div class="profile-visual-column">
+                        <div class="industry-visual-box service-box">
+                            <div class="visual-header">Service Operations Dashboard</div>
+                            <div class="service-metrics">
+                                <div class="metric-row">
+                                    <span>Outstanding Invoices</span>
+                                    <span class="text-red">$34,500</span>
+                                </div>
+                                <div class="metric-row">
+                                    <span>Average Payroll Cycle</span>
+                                    <span>Bi-Weekly</span>
+                                </div>
+                                <div class="metric-row">
+                                    <span>Reconciliation Status</span>
+                                    <span class="text-green">Active (Daily)</span>
+                                </div>
+                            </div>
+                            <div class="visual-insight-panel">
+                                <strong>Advisory:</strong> Your creative agency margins are healthy at 42%, but cash flow is bottlenecked because invoice clearing times have stretched from 15 to 38 days.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Financial Leakage & Margin Simulator -->
+    <section class="simulator-section" id="simulator">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="section-subtitle">INTERACTIVE ASSESSMENT</span>
+                <h2 class="section-title">Locate Hidden Revenue & Cost Leakages</h2>
+                <p class="section-desc max-w-2xl mx-auto">
+                    Adjust the sliders below based on your business metrics. See how disorganized record-keeping silently eats away at your cash flow, and how TaxTallyPro fixes it.
+                </p>
+            </div>
+
+            <div class="simulator-grid">
+                <!-- Sliders Column -->
+                <div class="simulator-sliders glass">
+                    <h3 class="sim-title">Enter Your Monthly Financials</h3>
+                    
+                    <div class="slider-group">
+                        <div class="slider-labels">
+                            <label for="range-revenue">Monthly Gross Revenue</label>
+                            <span class="slider-val-bubble" id="val-revenue">$150,000</span>
+                        </div>
+                        <input type="range" id="range-revenue" min="10000" max="500000" step="5000" value="150000" class="sim-range">
+                    </div>
+
+                    <div class="slider-group">
+                        <div class="slider-labels">
+                            <label for="range-cogs">Direct Expenses / COGS (%)</label>
+                            <span class="slider-val-bubble" id="val-cogs">45%</span>
+                        </div>
+                        <input type="range" id="range-cogs" min="10" max="80" step="1" value="45" class="sim-range">
+                    </div>
+
+                    <div class="slider-group">
+                        <div class="slider-labels">
+                            <label for="range-overhead">Overhead / Marketing (%)</label>
+                            <span class="slider-val-bubble" id="val-overhead">25%</span>
+                        </div>
+                        <input type="range" id="range-overhead" min="5" max="50" step="1" value="25" class="sim-range">
+                    </div>
+
+                    <div class="simulator-notice">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
+                        <span>Based on average operational data, un-updated books silently drain <strong>8.5%</strong> of net income due to billing errors and unrecognized expenses.</span>
+                    </div>
+                </div>
+
+                <!-- Live Results Column -->
+                <div class="simulator-results glass glow-border-blue-red">
+                    <h3 class="sim-title">Your Simulated Performance</h3>
+                    
+                    <div class="results-grid">
+                        <div class="res-card">
+                            <span class="res-lbl">Reported Monthly profit</span>
+                            <span class="res-val" id="res-profit">$45,000</span>
+                            <span class="res-sub">Estimated profit margin: <strong id="res-margin-pct">30%</strong></span>
+                        </div>
+                        
+                        <div class="res-card val-danger">
+                            <span class="res-lbl">Estimated Hidden Leakage</span>
+                            <span class="res-val text-red" id="res-leakage">$3,825</span>
+                            <span class="res-sub">Silently lost every single month</span>
+                        </div>
+                    </div>
+
+                    <div class="indicator-group">
+                        <div class="indicator-header">
+                            <span>Tax Audit Readiness Index</span>
+                            <span class="indicator-level text-yellow" id="tax-level">Alert (Medium Risk)</span>
+                        </div>
+                        <div class="indicator-bar-bg">
+                            <div class="indicator-bar-fill val-yellow" id="tax-bar" style="width: 55%;"></div>
+                        </div>
+                    </div>
+
+                    <div class="advisor-box">
+                        <div class="advisor-header">
+                            <span class="pulse-dot"></span>
+                            <span>TaxTallyPro Strategic Plan</span>
+                        </div>
+                        <p class="advisor-text" id="advisor-verdict">
+                            "With COGS at 45% and Overhead at 25%, you keep $45,000 in monthly profit. However, $3,825 is likely leaking through unreconciled invoices and expense tracking gaps. Let's build a proper job costing structure to secure this margin."
+                        </p>
+                    </div>
+
+                    <div class="results-cta">
+                        <a href="#contact" class="btn btn-primary w-full text-center">Reclaim Your Leakage Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Proven Case Studies Section -->
+    <section class="case-studies-section" id="case-studies">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="section-subtitle">REAL RESULTS FOR REAL FOUNDERS</span>
+                <h2 class="section-title">Deep Operational Success Stories</h2>
+                <p class="section-desc max-w-2xl mx-auto">
+                    We don't just state our value; we prove it. Explore how our specialized accounting systems transformed actual operational challenges into streamlined financial engines.
+                </p>
+            </div>
+
+            <div class="cases-grid">
+                <!-- Construction Case Study -->
+                <div class="case-card glass">
+                    <div class="case-card-header bg-construction">
+                        <span class="case-badge">Construction Niche</span>
+                        <h3 class="case-card-title">Commercial & HVAC Team</h3>
+                    </div>
+                    <div class="case-card-body">
+                        <div class="case-stat-row">
+                            <div class="case-stat">
+                                <span class="stat-number text-gradient-red-blue">4.8%</span>
+                                <span class="stat-lbl">Margin Increase</span>
+                            </div>
+                            <div class="case-stat">
+                                <span class="stat-number text-gradient-red-blue">Zero</span>
+                                <span class="stat-lbl">Tax Prep Delays</span>
+                            </div>
+                        </div>
+                        <p class="case-desc">
+                            A general contractor team managing 14 concurrent projects with annual revenues of $2.2M faced severe bottlenecks. They struggled to track labor, materials, and subcontractor costs, leading to frequent underbids and cash flow blockages.
+                        </p>
+                        <div class="case-details-list">
+                            <span>🛠️ untangled job costs and active subcontractor payroll.</span>
+                            <span>📊 Designed custom dashboards detailing exact project profitability.</span>
+                            <span>⚡ Implemented progress billing sequences to remove cash gaps.</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- E-Commerce Case Study -->
+                <div class="case-card glass">
+                    <div class="case-card-header bg-ecommerce">
+                        <span class="case-badge">E-Commerce Niche</span>
+                        <h3 class="case-card-title">Shopify & Amazon Apparel Brand</h3>
+                    </div>
+                    <div class="case-card-body">
+                        <div class="case-stat-row">
+                            <div class="case-stat">
+                                <span class="stat-number text-gradient-red-blue">100%</span>
+                                <span class="stat-lbl">Payout Reconciliation</span>
+                            </div>
+                            <div class="case-stat">
+                                <span class="stat-number text-gradient-red-blue">+$18k</span>
+                                <span class="stat-lbl">Ad Spend Saved</span>
+                            </div>
+                        </div>
+                        <p class="case-desc">
+                            An apparel brand pulling in $1.5M annually faced extreme confusion. Financial data was scattered across Shopify, Amazon, Stripe, PayPal, and multiple banks, creating an illusion of profit while their cash balance trended negative.
+                        </p>
+                        <div class="case-details-list">
+                            <span>🔗 Reconciled scattered payout channels into single clean ledgers.</span>
+                            <span>📦 Established automated real-time inventory valuations and COGS.</span>
+                            <span>📈 Generated itemized, product-wise monthly profit reports.</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Real Estate Case Study -->
+                <div class="case-card glass">
+                    <div class="case-card-header bg-realestate">
+                        <span class="case-badge">Real Estate Niche</span>
+                        <h3 class="case-card-title">15+ Unit Portfolio Investor</h3>
+                    </div>
+                    <div class="case-card-body">
+                        <div class="case-stat-row">
+                            <div class="case-stat">
+                                <span class="stat-number text-gradient-red-blue">10 Days</span>
+                                <span class="stat-lbl">Faster Tax Filing</span>
+                            </div>
+                            <div class="case-stat">
+                                <span class="stat-number text-gradient-red-blue">Unit-by-Unit</span>
+                                <span class="stat-lbl">Expense Allocation</span>
+                            </div>
+                        </div>
+                        <p class="case-desc">
+                            A multi-unit property landlord struggled with mixed expenses across 15+ rental locations, delayed rent tracking, and chaotic tax preparations, rendering them unable to compute actual ROI per property.
+                        </p>
+                        <div class="case-details-list">
+                            <span>🏠 Separated maintenance and capital investments across specific units.</span>
+                            <span>⏰ Configured automated rent logging and instant payment alerts.</span>
+                            <span>📉 Isolated mortgage interest, rental income, and property management fees.</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Competitive Advantage Grid -->
+    <section class="why-us-section" id="why-us">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="section-subtitle">GLOBAL ADVANTAGE</span>
+                <h2 class="section-title">The International Accounting Landscape</h2>
+                <p class="section-desc max-w-2xl mx-auto">
+                    How scaling firms operate globally—and why our translation-first approach delivers maximum clarity compared to tech-only automation or rigid corporate giants.
+                </p>
+            </div>
+
+            <div class="regions-grid">
+                <!-- Australia -->
+                <div class="region-card glass">
+                    <div class="region-flag">
+                        <img src="flags/au.svg" alt="Australia Flag" class="flag-img" />
+                    </div>
+                    <h3 class="region-title">Australia</h3>
+                    <p class="region-desc">
+                        Divided between remote automation firms (like <em>Accounts Automated</em> focusing on fixed price BAS compliance), traditional consulting agencies (<em>K Partners</em> in Melbourne), and high-level strategy firms (<em>Charltons</em> in Sydney, <em>Accru</em>, or <em>Allan Hall</em>). Most require bespoke quotes or operate through corporate RFPs.
+                    </p>
+                    <div class="region-highlight-tag">Focus: BAS Compliance & Cloud Workflows</div>
+                </div>
+
+                <!-- United States -->
+                <div class="region-card glass">
+                    <div class="region-flag">
+                        <img src="flags/us.svg" alt="United States Flag" class="flag-img" />
+                    </div>
+                    <h3 class="region-title">United States</h3>
+                    <p class="region-desc">
+                        Dominated by massive tech-heavy platforms (like <em>Bench</em> and <em>Pilot</em> providing venture startups with accrual models), fixed-rate automation (<em>Merritt</em> at $190/mo), flat-rate platforms (<em>Xendoo</em>, <em>Bookkeeper360</em>, or <em>1-800Accountant</em>), and on-demand tax marketplaces like <em>Taxfyle</em>.
+                    </p>
+                    <div class="region-highlight-tag">Focus: Automated Pipelines & Marketplace Tax Prep</div>
+                </div>
+
+                <!-- Canada -->
+                <div class="region-card glass">
+                    <div class="region-flag">
+                        <img src="flags/ca.svg" alt="Canada Flag" class="flag-img" />
+                    </div>
+                    <h3 class="region-title">Canada</h3>
+                    <p class="region-desc">
+                        Centered around remote-first accounting practices like <em>Zenbooks</em> in Ottawa (offering fractional CFO support via premium retainers), <em>Avalon Accounting</em> (approachability-focused flat fees), and e-commerce tax specialists like <em>SAL Accounting</em> or <em>UpCounting</em>.
+                    </p>
+                    <div class="region-highlight-tag">Focus: Remote Integrations & CFO Retainers</div>
+                </div>
+
+                <!-- Middle East -->
+                <div class="region-card glass">
+                    <div class="region-flag">
+                        <img src="flags/ae.svg" alt="UAE Flag" class="flag-img" />
+                    </div>
+                    <h3 class="region-title">Middle East (UAE)</h3>
+                    <p class="region-desc">
+                        Highly specialized around Federal Tax Authority compliances, Corporate Tax registrations, and Free Zone corporate licensing setup services (led by corporate practices like <em>Jitendra Chartered</em>, <em>RSN Finance</em>, <em>KBA Accounting</em>, or <em>BCL Globiz</em>).
+                    </p>
+                    <div class="region-highlight-tag">Focus: VAT Registration & Free Zone Compliance</div>
+                </div>
+            </div>
+
+            <!-- Synthesis Core Pitch -->
+            <div class="synthesis-card glass glow-border-blue-red text-center">
+                <div class="synthesis-glow"></div>
+                <h3 class="synthesis-title">The TaxTallyPro Advantage</h3>
+                <p class="synthesis-text">
+                    Whether you are competing in Melbourne, Toronto, Dubai, or New York, the core problem is identical: <strong>business owners are overwhelmed by numbers they cannot interpret</strong>. Generic cloud systems automate data entry, but fail to explain what your financials mean. We bridge that exact gap, translating raw data channels into clean cash flow projections and strategic roadmaps.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Client Portal Mockup (Hidden/Triggered Modal) -->
+    <div class="portal-modal-overlay" id="portal-modal">
+        <div class="portal-modal glass">
+            <button class="close-portal" id="close-portal" aria-label="Close Portal">&times;</button>
+            <div class="portal-header text-center">
+                <a href="#" class="portal-logo">
+                    <span class="logo-text-blue">TaxTally</span><span class="logo-text-red">Pro</span> <span class="portal-badge">Vault</span>
+                </a>
+                <p class="portal-subtitle">Secure Multi-Platform Portal Access</p>
+            </div>
+
+            <div class="portal-options">
+                <button class="portal-opt-btn active" data-portal="client">Client Login</button>
+                <button class="portal-opt-btn" data-portal="admin">Admin Portal</button>
+            </div>
+
+            <!-- Client Login Form -->
+            <form class="portal-form active" id="form-client-login">
+                <div class="form-group">
+                    <label>Corporate Email Address</label>
+                    <input type="email" placeholder="owner@yourcompany.com" required class="portal-input">
+                </div>
+                <div class="form-group">
+                    <label>Password</label>
+                    <input type="password" placeholder="••••••••••••" required class="portal-input">
+                </div>
+                <div class="security-indicator">
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#22C55E" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                    256-Bit SSL Secured Session
+                </div>
+                <button type="submit" class="btn btn-primary w-full">Sign In to Dashboard</button>
+            </form>
+
+            <!-- Admin Login Form (Exposing placeholders securely for structural purposes) -->
+            <form class="portal-form" id="form-admin-login">
+                <div class="form-group">
+                    <label>Authorized Username</label>
+                    <input type="text" placeholder="admin_user" id="admin-user-field" required class="portal-input">
+                </div>
+                <div class="form-group">
+                    <label>Security Key</label>
+                    <input type="password" placeholder="••••••••••••" id="admin-pass-field" required class="portal-input">
+                </div>
+                <div class="security-indicator">
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#EF4444" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+                    Internal network tracking enabled
+                </div>
+                <button type="submit" class="btn btn-secondary w-full">Authenticate Access</button>
+            </form>
+            
+            <div id="portal-msg" class="portal-status-msg"></div>
+        </div>
+    </div>
+
+    <!-- Contact & Consultation Section -->
+    <section class="contact-section" id="contact">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h2 class="section-title">Schedule a Financial Translation Audit</h2>
+                    <p class="contact-desc">
+                        Stop operating in the dark. Let our expert accounting team review your current ledger structure, identify hidden cost leakages, and show you how simple, clean reports can change how you manage your business.
+                    </p>
+                    
+                    <div class="contact-cards">
+                        <div class="info-card glass">
+                            <span class="info-icon">📍</span>
+                            <div>
+                                <strong>Global Operations</strong>
+                                <p>Offices & representation across USA, Canada, Australia, and UAE.</p>
+                            </div>
+                        </div>
+                        <div class="info-card glass">
+                            <span class="info-icon">✉️</span>
+                            <div>
+                                <strong>Direct Inquiries</strong>
+                                <p>taxtallypro2@gmail.com</p>
+                            </div>
+                        </div>
+                        <div class="info-card glass">
+                            <span class="info-icon">🔒</span>
+                            <div>
+                                <strong>Enterprise Data Security</strong>
+                                <p>Encrypted data channels synced securely with QuickBooks, Xero, Shopify, and Amazon.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Form Card -->
+                <div class="contact-form-container glass glow-border-blue-red" id="audit-form-container">
+                    <h3 class="form-title">Request Your Free Assessment</h3>
+                    <form id="audit-form" class="audit-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="audit-name">Full Name</label>
+                                <input type="text" id="audit-name" placeholder="John Doe" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="audit-company">Business Name</label>
+                                <input type="text" id="audit-company" placeholder="ACME Service Corp" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="audit-email">Business Email</label>
+                                <input type="email" id="audit-email" placeholder="john@company.com" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="audit-industry">Industry Sector</label>
+                                <select id="audit-industry" required>
+                                    <option value="" disabled selected>Select Industry</option>
+                                    <option value="service">Service-Based Business</option>
+                                    <option value="construction">Construction & Contractor</option>
+                                    <option value="ecommerce">E-Commerce Brand</option>
+                                    <option value="realestate">Real Estate & Rentals</option>
+                                    <option value="other">Growth-Focused Corporation</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="audit-revenue">Current Monthly Revenue</label>
+                            <select id="audit-revenue" required>
+                                <option value="" disabled selected>Select Revenue Bracket</option>
+                                <option value="under20k">Under $20,000 / month</option>
+                                <option value="20k-80k">$20,000 - $80,000 / month</option>
+                                <option value="80k-250k">$80,000 - $250,000 / month</option>
+                                <option value="over250k">Over $250,000 / month</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="audit-notes">Primary Back-Office Challenge</label>
+                            <textarea id="audit-notes" rows="3" placeholder="e.g. Unreconciled Shopify payouts, messy subcontractor payroll, cash flow tracking anxiety..."></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary w-full text-center">Submit Audit Request</button>
+                    </form>
+                    <div id="form-feedback" class="form-feedback-message"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-container">
+            <div class="footer-brand">
+                <a href="#" class="footer-logo">
+                    <span class="logo-text-blue">TaxTally</span><span class="logo-text-red">Pro</span>
+                </a>
+                <p class="footer-tagline">
+                    Bridging the gap between raw data entry and strategic business management. 
+                </p>
+                <div class="social-links">
+                    <a href="#" aria-label="Facebook">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+                    </a>
+                    <a href="#" aria-label="Instagram">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+                    </a>
+                    <a href="#" aria-label="LinkedIn">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer-links-grid">
+                <div class="link-col">
+                    <h4>Niches We Support</h4>
+                    <ul>
+                        <li><a href="#profiles">Service Industries</a></li>
+                        <li><a href="#profiles">Construction Teams</a></li>
+                        <li><a href="#profiles">E-Commerce Stores</a></li>
+                        <li><a href="#profiles">Real Estate Investors</a></li>
+                    </ul>
+                </div>
+                <div class="link-col">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="#services">Our Approach</a></li>
+                        <li><a href="#case-studies">Case Studies</a></li>
+                        <li><a href="#simulator">Marginal Calculator</a></li>
+                        <li><a href="#why-us">Global Presence</a></li>
+                    </ul>
+                </div>
+                <div class="link-col">
+                    <h4>Security Credentials</h4>
+                    <ul>
+                        <li><a href="#" class="portal-trigger-foot">Client Hub Portal</a></li>
+                        <li><a href="#" class="portal-trigger-foot">Admin Gateway</a></li>
+                        <li><a href="#">Data Privacy Shield</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <div class="container footer-bottom-container">
+                <p>&copy; 2026 TaxTallyPro. All Rights Reserved. Designed with premium dark aesthetics.</p>
+                <div class="footer-sec-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Script File -->
+    <script src="main.js"></script>
+</body>
+</html>
