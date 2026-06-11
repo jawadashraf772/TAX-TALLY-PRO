@@ -496,17 +496,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 submitBtn.textContent = originalBtnText;
                 submitBtn.disabled = false;
                 
-                // Transition form view or show details
-                formFeedback.className = 'form-feedback-message success';
-                formFeedback.innerHTML = `
-                    <strong>Audit Scheduled Successfully!</strong><br>
-                    Thank you, <strong>${clientName}</strong>. We have initialized a pre-audit file for <strong>${companyName}</strong>. 
-                    A senior financial translator specializing in your sector will email you at <strong>${clientEmail}</strong> 
-                    within 4 hours with your preliminary cost leakage analysis.
-                `;
+                // Redirect to the newly created Thank You page
+                window.location.href = 'thank-you.html';
                 
                 auditForm.reset();
-                formFeedback.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
             }, 1800);
         });
     }
