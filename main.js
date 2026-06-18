@@ -471,14 +471,77 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
     // ==========================================
-    // 5. Contact Audit Request Form Handling
+    // 5. Contact Audit Request Form Handling & Meta Conversions API
     // ==========================================
     const auditForm = document.getElementById('audit-form');
     const formFeedback = document.getElementById('form-feedback');
     const formContainer = document.getElementById('audit-form-container');
 
+    // Helper to hash string using SHA-256 (required by Meta Conversions API)
+    async function hashValue(value) {
+        if (!value) return null;
+        const msgBuffer = new TextEncoder().encode(value.trim().toLowerCase());
+        const hashBuffer = await crypto.subtle.digest('SHA-256', msgBuffer);
+        const hashArray = Array.from(new Uint8Array(hashBuffer));
+        return hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
+    }
+
+    async function sendMetaConversionsAPI(name, email, company, industry) {
+        const pixelId = '2429026794253906';
+        const accessToken = 'EAAN5l3x0FwgBRley8salbWX48d5zhV4SvRDSUQr6EQI6GXubOvNKMwAflB6oz6L1pDvhuI7PlSfZC0ZBaUgZBony0TgCBVIyVnc1GaWwPp2PF64SAXE2cVy9axcB6xtwbUY4evasncjQcaGtLNin0DGFMeLEC1zKpUEiuN4XO7o6timL8qqj3pzGKpEPVvzFQZDZD';
+        
+        try {
+            const hashedEmail = await hashValue(email);
+            const hashedFirstName = await hashValue(name.split(' ')[0]);
+            const hashedLastName = await hashValue(name.split(' ').slice(1).join(' ') || name);
+            
+            let clientIp = '';
+            try {
+                const ipResponse = await fetch('https://api.ipify.org?format=json');
+                const ipData = await ipResponse.json();
+                clientIp = ipData.ip;
+            } catch (e) {
+                console.log('Could not fetch IP, continuing without it', e);
+            }
+
+            const payload = {
+                data: [
+                    {
+                        event_name: 'Lead',
+                        event_time: Math.floor(Date.now() / 1000),
+                        action_source: 'website',
+                        event_source_url: window.location.href,
+                        user_data: {
+                            client_ip_address: clientIp || null,
+                            client_user_agent: navigator.userAgent,
+                            em: hashedEmail ? [hashedEmail] : null,
+                            fn: hashedFirstName ? [hashedFirstName] : null,
+                            ln: hashedLastName ? [hashedLastName] : null
+                        },
+                        custom_data: {
+                            company_name: company,
+                            industry: industry
+                        }
+                    }
+                ]
+            };
+
+            const url = `https://graph.facebook.com/v19.0/${pixelId}/events?access_token=${accessToken}`;
+            
+            await fetch(url, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(payload)
+            });
+        } catch (error) {
+            console.error('Error sending event to Meta Conversions API:', error);
+        }
+    }
+
     if (auditForm) {
-        auditForm.addEventListener('submit', (e) => {
+        auditForm.addEventListener('submit', async (e) => {
             e.preventDefault();
             
             const submitBtn = auditForm.querySelector('button[type="submit"]');
@@ -491,16 +554,16 @@ document.addEventListener('DOMContentLoaded', () => {
             const clientEmail = document.getElementById('audit-email').value;
             const selectedIndustry = document.getElementById('audit-industry').value;
 
-            // Simulate parsing calculations
-            setTimeout(() => {
-                submitBtn.textContent = originalBtnText;
-                submitBtn.disabled = false;
-                
-                // Redirect to the newly created Thank You page
-                window.location.href = 'thank-you.html';
-                
-                auditForm.reset();
-            }, 1800);
+            // Trigger Conversions API and redirect
+            await sendMetaConversionsAPI(clientName, clientEmail, companyName, selectedIndustry);
+
+            submitBtn.textContent = originalBtnText;
+            submitBtn.disabled = false;
+            
+            // Redirect to the newly created Thank You page
+            window.location.href = 'thank-you.html';
+            
+            auditForm.reset();
         });
     }
 
