@@ -37,6 +37,39 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
 
+    // Smooth scroll for all hash links with offset calculation
+    document.addEventListener('click', (e) => {
+        const anchor = e.target.closest('a[href^="#"]');
+        if (!anchor) return;
+        
+        const targetId = anchor.getAttribute('href');
+        if (targetId === '#' || targetId === '#portal-modal') return;
+        
+        const targetElement = document.querySelector(targetId);
+        if (targetElement) {
+            e.preventDefault();
+            
+            // Close mobile menu if open
+            if (navMenu && navMenu.classList.contains('active')) {
+                navMenu.classList.remove('active');
+                if (mobileToggle) mobileToggle.classList.remove('open');
+            }
+            
+            // Calculate offset based on fixed navbar height
+            const navbarWrapper = document.querySelector('.navbar-wrapper');
+            const navbarHeight = navbarWrapper ? navbarWrapper.offsetHeight : 80;
+            const extraPadding = 20; // Extra offset to clear header nicely
+            
+            const elementPosition = targetElement.getBoundingClientRect().top;
+            const offsetPosition = elementPosition + window.pageYOffset - navbarHeight - extraPadding;
+            
+            window.scrollTo({
+                top: offsetPosition,
+                behavior: 'smooth'
+            });
+        }
+    });
+
     // ==========================================
     // 2. Interactive Profile Selector Data
     // ==========================================
