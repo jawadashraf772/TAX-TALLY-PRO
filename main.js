@@ -251,7 +251,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         </div>
 
                         <div class="profile-footer-cta">
-                            <a href="#contact" class="btn btn-primary">Request ${data.title.split(' ')[0]} Audit</a>
+                            <a href="#audit-form-container" class="btn btn-primary">Request ${data.title.split(' ')[0]} Audit</a>
                         </div>
                     </div>
                     
