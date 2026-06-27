@@ -573,6 +573,21 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
+    async function sendToExternalWebhook(data) {
+        const webhookUrl = 'https://services.leadconnectorhq.com/hooks/jsFxE6NCPcceaMWkTYxC/webhook-trigger/e336261f-a681-4302-9ce8-f2d4374389c0';
+        try {
+            await fetch(webhookUrl, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(data)
+            });
+        } catch (error) {
+            console.error('Error sending data to external webhook:', error);
+        }
+    }
+
     if (auditForm) {
         auditForm.addEventListener('submit', async (e) => {
             e.preventDefault();
@@ -586,9 +601,24 @@ document.addEventListener('DOMContentLoaded', () => {
             const companyName = document.getElementById('audit-company').value;
             const clientEmail = document.getElementById('audit-email').value;
             const selectedIndustry = document.getElementById('audit-industry').value;
+            const monthlyRevenue = document.getElementById('audit-revenue').value;
+            const challengeNotes = document.getElementById('audit-notes').value;
 
-            // Trigger Conversions API and redirect
-            await sendMetaConversionsAPI(clientName, clientEmail, companyName, selectedIndustry);
+            const leadData = {
+                name: clientName,
+                company: companyName,
+                email: clientEmail,
+                industry: selectedIndustry,
+                revenue: monthlyRevenue,
+                notes: challengeNotes,
+                source: 'TaxTallyPro Landing Page'
+            };
+
+            // Trigger Conversions API and LeadConnector webhook concurrently
+            await Promise.all([
+                sendMetaConversionsAPI(clientName, clientEmail, companyName, selectedIndustry),
+                sendToExternalWebhook(leadData)
+            ]);
 
             submitBtn.textContent = originalBtnText;
             submitBtn.disabled = false;
